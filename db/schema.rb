@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160216130506) do
+ActiveRecord::Schema.define(version: 20160216191539) do
 
   create_table "tweets", force: :cascade do |t|
     t.text     "text"
     t.string   "user"
     t.datetime "posted_at"
-    t.integer  "twitter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "twitter_id"
   end
 
   add_index "tweets", ["posted_at"], name: "index_tweets_on_posted_at"

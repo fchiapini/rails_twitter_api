@@ -7,16 +7,16 @@ namespace :search_for do
   		                           GROUP BY the_hour
   		                           ORDER BY the_hour ASC")
   	@tweets.each do | tweet | 
-  		puts "#{tweet['the_hour'].to_i}" + " horas -> " + "#{tweet['tweets'].to_i}"
+  		puts "#{tweet['the_hour'].to_i}" + " horas -> " + "#{tweet['tweets'].to_i}" + " tweets"
   	end
   end
 
   desc "search for the user with the biggest number of tweets"
   task first_user_in_number_of_tweets: :environment do
-  	@tweets = Tweet.find_by_sql "SELECT user_name, COUNT(user_name) AS tweets 
+  	@tweets = Tweet.find_by_sql ("SELECT user_name, COUNT(user_name) AS tweets 
   	                             FROM tweets
   	                             GROUP BY user_name
-  	                             ORDER BY COUNT(user_name) DESC LIMIT 1"
+  	                             ORDER BY COUNT(user_name) DESC LIMIT 1")
   	@tweets.each do | tweet |
   		puts "#{tweet['user_name']}" + ": " + "#{tweet['tweets'].to_s}" + " tweets"
     end

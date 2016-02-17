@@ -13,7 +13,7 @@ describe Api::V1::TweetsController do
 
     it "returns the information about a reporter on a hash" do
       tweet_response = JSON.parse( response.body, symbolize_names: true )
-      expect( tweet_response[ :user ] ).to eql @tweet.user
+      expect( tweet_response[ :user_name ] ).to eql @tweet.user_name
     end
 
     it { should respond_with 200 }
@@ -29,7 +29,7 @@ describe Api::V1::TweetsController do
 
       it "renders the json representation for the tweet record just created" do
         tweet_response = JSON.parse( response.body, symbolize_names: true )
-        expect( tweet_response[ :user ] ).to eql @tweet_attributes[ :user ]
+        expect( tweet_response[ :user_name ] ).to eql @tweet_attributes[ :user_name ]
       end
 
       it { should respond_with 201 }
@@ -37,7 +37,7 @@ describe Api::V1::TweetsController do
 
     context "when is not created" do
       before( :each ) do
-        #notice I'm not including the user
+        #notice I'm not including the user_name
         @invalid_tweet_attributes = { text: "My first tweet!",
                                       posted_at: Time.now,
                                       twitter_id: 2 }
@@ -51,7 +51,7 @@ describe Api::V1::TweetsController do
 
       it "renders the json errors on why the tweet could not be created" do
         tweet_response = JSON.parse( response.body, symbolize_names: true )
-        expect( tweet_response[ :errors ][ :user ]).to include "can't be blank"
+        expect( tweet_response[ :errors ][ :user_name ]).to include "can't be blank"
       end
 
       it { should respond_with 422 }

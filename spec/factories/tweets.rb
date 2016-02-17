@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :tweet do
-    user "@felipe"
+    user_name "@felipe"
     text "My first tweet!"
     posted_at Time.now
     twitter_id 1

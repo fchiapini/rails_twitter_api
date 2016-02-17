@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160216191539) do
+ActiveRecord::Schema.define(version: 20160217135829) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "tweets", force: :cascade do |t|
     t.text     "text"
-    t.string   "user"
+    t.string   "user_name"
     t.datetime "posted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -26,6 +26,6 @@ ActiveRecord::Schema.define(version: 20160216191539) do
   end
 
   add_index "tweets", ["posted_at"], name: "index_tweets_on_posted_at", using: :btree
-  add_index "tweets", ["user"], name: "index_tweets_on_user", using: :btree
+  add_index "tweets", ["user_name"], name: "index_tweets_on_user_name", using: :btree
 
 end

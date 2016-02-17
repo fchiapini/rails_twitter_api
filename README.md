@@ -1,5 +1,3 @@
-== README
-
 # RAILS TWITTER API
 
 API rails para inserção de tweets no banco de dados.
@@ -52,9 +50,9 @@ $ sudo git clone git://github.com/ysbaddaden/prax.git /opt/prax
 
 ```sh
 $ cd /opt/prax/
-$ ./bin/prax install  
-Then we just need to link the apps:
+$ ./bin/prax install
 ```
+Faça o link da aplicação:
 
 ```sh
 $ cd ~/workspace/rails_twitter_api
@@ -72,24 +70,6 @@ http://api.rails_twitter_api.dev/
 
 Se você visualizar a tela com a frase: "Welcome aboard", você já está com acesso a API.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 [postgres]: <https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-14-04>
 
 [README]: <https://github.com/ysbaddaden/prax/blob/master/README.rdoc>
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

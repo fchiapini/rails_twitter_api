@@ -16,9 +16,15 @@ API rails para inserção de tweets no banco de dados.
 
 Para mais informações de instalação do banco de dados, acesse: [Postgres]
 
-#### 2 - Criação do usuário e senha no banco de dados
+#### 2 - Instalação das gems da aplicação:
 
-#### 3 - Alteração do arquivo de configuração do banco de dados do app:
+```sh
+bundle install
+```
+
+#### 3 - Criação do usuário e senha no banco de dados
+
+#### 4 - Alteração do arquivo de configuração do banco de dados do app:
 
 ```sh
 /workspace/rails_twitter_api/config/database.yml
@@ -42,7 +48,7 @@ rake db:create
 rake db:migrate
 ```
 
-#### 4 - Instalação do servidor proxy - Prax
+#### 5 - Instalação do servidor proxy - Prax
 
 Para somente usuários linux, as instruções foram seguidas através da documentação oficial, para mais informações leia o arquivo [README] no repositório do github. 
 

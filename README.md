@@ -12,17 +12,19 @@ API rails para inserção de tweets no banco de dados.
 
 ### Iniciando:
 
+#### Faça a clonagem ou download da aplicação para a máquina local em [Rails Twitter API].
+
 #### 1 - Instalação do banco de dados postgres
 
 Para mais informações de instalação do banco de dados, acesse: [Postgres]
 
-#### 2 - Instalação das gems da aplicação:
+#### 2 - Criação do usuário e senha no banco de dados
+
+#### 3 - Instalação das gems da aplicação:
 
 ```sh
 bundle install
 ```
-
-#### 3 - Criação do usuário e senha no banco de dados
 
 #### 4 - Alteração do arquivo de configuração do banco de dados do app:
 
@@ -80,6 +82,10 @@ http://api.rails_twitter_api.dev/
 
 Se você visualizar a tela com a frase: "Welcome aboard", o servidor proxy foi iniciado com sucesso.
 
+#### 6 - Aplicativo ruby twitter_integration
+
+Acesse a documentação [Twitter Integration] para executar o aplicativo e enviar os tweets para a API rails_twitter_api que serão armazenados no banco de dados.
+
 #### Rake tasks
 
 A API possue duas tasks para a busca de informações no banco de dados:
@@ -111,3 +117,7 @@ workspace/rails_twitter_api/lib/spec
 [Postgres]: <https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-14-04>
 
 [README]: <https://github.com/ysbaddaden/prax/blob/master/README.rdoc>
+
+[Twitter Integration]: <https://github.com/fchiapini/twitter_integration>
+
+[Rails Twitter API]: <https://github.com/fchiapini/rails_twitter_api>

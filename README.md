@@ -64,6 +64,9 @@ $ sudo git clone git://github.com/ysbaddaden/prax.git /opt/prax
 $ cd /opt/prax/
 $ ./bin/prax install
 ```
+
+Se você utiliza um gerenciador de versão ruby acesse [Ruby Version Managers].
+
 Faça o link da aplicação:
 
 OBSERVAÇÃO: o diretório da aplicação deve ser rails_twitter_api como no exemplo abaixo:
@@ -123,3 +126,5 @@ workspace/rails_twitter_api/lib/spec
 [Twitter Integration]: <https://github.com/fchiapini/twitter_integration>
 
 [Rails Twitter API]: <https://github.com/fchiapini/rails_twitter_api>
+
+[Ruby Version Managers]: <https://github.com/ysbaddaden/prax/wiki/Ruby-Version-Managers>

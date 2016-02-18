@@ -66,6 +66,8 @@ $ ./bin/prax install
 ```
 Faça o link da aplicação:
 
+OBSERVAÇÃO: o diretório da aplicação deve ser rails_twitter_api como no exemplo abaixo:
+
 ```sh
 $ cd ~/workspace/rails_twitter_api
 $ prax link
